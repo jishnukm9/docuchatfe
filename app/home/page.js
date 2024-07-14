@@ -68,9 +68,9 @@ export default function Page() {
           redirect: "follow"
         });
   
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
+        // if (!response.ok) {
+        //   throw new Error('Network response was not ok');
+        // }
   
         const data = await response.json();
         const aiResponse = data.Response[data.Response.length - 1];
