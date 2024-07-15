@@ -20,7 +20,7 @@ const TypingEffect = ({ text }) => {
       const timer = setTimeout(() => {
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1);
-      }, 30);
+      }, 1);
 
       return () => clearTimeout(timer);
     }
@@ -155,7 +155,8 @@ export default function Page() {
         {isTyping && (
           <div className="max-w-xl mr-auto animate-fade-in">
             <div className="rounded-2xl p-4 shadow-md bg-white text-gray-800">
-              <TypingEffect text="...." />
+              {/* <TypingEffect text="...." /> */}
+              <img src="typing.gif" alt="Logo" className="h-4 w-auto" />
             </div>
           </div>
         )}
