@@ -13,6 +13,7 @@ export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading,setIsLoading] =useState(false)
+  const [showTooltip, setShowTooltip] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -204,7 +205,9 @@ export default function Login() {
             <div className="mt-3">
               <button
                disabled
-              title='Coming Soon'
+          title="Coming Soon"
+              onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
                 onClick={handleGoogleLogin}
                 className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
@@ -213,6 +216,12 @@ export default function Login() {
                 </svg>
                 Sign in with Google
               </button>
+              {showTooltip && (
+        <div className="absolute z-10 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700 bottom-full left-1/2 transform -translate-x-1/2 mb-2">
+          Coming Soon
+          <div className="tooltip-arrow" data-popper-arrow></div>
+        </div>
+      )}
             </div>
           </div>
         </div>
