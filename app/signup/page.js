@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
@@ -36,12 +36,37 @@ export default function Login() {
           body: JSON.stringify({ email: email,username:username,password:password })
         });
 
+        const data = await response.json();
+
+        // if(response.status == 401 || response.status == 404){
+
+        //   setIsLoading(false)
+        //   toast.error('Username or Password is Incorrect!');
+        //   throw new Error('Username or Password is Incorrect!');
+        // }
+
+        if (!response.ok) {
+        if ("username" in data){
+  toast.error(data.username);
+  setIsLoading(false)
+          throw new Error(data.username);
+          
+        }
+        if ("email" in data){
+          toast.error(data.email);
+          setIsLoading(false)
+                  throw new Error(data.email);
+                  
+                }
+      }
+
+
         if (!response.ok) {
           setIsLoading(false)
           throw new Error('Network response was not ok');
         }
 
-        const data = await response.json();
+        
         console.log(data)
         router.push('/login')
       } catch (error) {
@@ -73,7 +98,7 @@ export default function Login() {
           DocuChat
         </h2>
 
-        
+        <Toaster />
         
         <p className="mt-2 text-center text-sm text-gray-600">
           Signup to your AI chat assistant
@@ -178,6 +203,8 @@ export default function Login() {
 
             <div className="mt-3">
               <button
+               disabled
+              title='Coming Soon'
                 onClick={handleGoogleLogin}
                 className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
