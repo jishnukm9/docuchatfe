@@ -92,7 +92,8 @@ export default function Page() {
     // Redirect to login page or another appropriate page
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/api-auth/logout/', {
+      const host_name = process.env.NEXT_PUBLIC_HOST_NAME;
+        const response = await fetch(`${host_name}/api-auth/logout/`, {
           method: 'POST',
   
             headers: {
