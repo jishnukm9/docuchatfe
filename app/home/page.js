@@ -92,6 +92,7 @@ export default function Page() {
     // Remove the token from localStorage
     
     const token = localStorage.getItem('token');
+    const sessionId = Cookies.get('sessionid');
     // Redirect to login page or another appropriate page
     setIsLoading(true)
     try {
@@ -102,9 +103,12 @@ export default function Page() {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`, 
+                'Cookie': `sessionid=${sessionId}`
           
           },
-          body: JSON.stringify({  })
+          body: JSON.stringify({  }),
+           credentials: 'include', // This is important for including cookies in the request
+          redirect: "follow"
         });
 
         if (!response.ok) {
