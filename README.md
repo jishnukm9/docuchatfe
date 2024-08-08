@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DocuChat
 
-## Getting Started
+DocuChat is an AI-powered chat assistant that combines Google's Gemini API for advanced conversational capabilities with a sleek, responsive UI built using Next.js and Tailwind CSS. The robust backend, powered by Django, ensures reliable performance and efficient data management. DocuChat delivers an intuitive chatbot experience, providing quick answers, creative ideas, and coding help, making it an indispensable tool for a wide range of users.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **AI-Powered Conversational Abilities**: Leveraging Google's Gemini API, DocuChat offers intelligent and natural language understanding, allowing users to engage in seamless conversations and receive helpful responses.
+- **Responsive and Modern UI**: The user interface, built with Next.js and Tailwind CSS, provides a visually appealing and highly interactive experience, adapting seamlessly across various devices and screen sizes.
+- **Reliable Backend**: The Django-powered backend ensures efficient data management, scalability, and robust performance, delivering a dependable chatbot experience.
+- **Versatile Assistance**: DocuChat can assist users with a wide range of tasks, including quick answers, creative ideation, and even coding help, making it a valuable tool for diverse user needs.
+  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Front-end**: Next.js, Tailwind CSS
+- **Back-end**: Django
+- **Conversational AI:**: Google Gemini API
+- **Database**: SQLite
 
-## Learn More
+  
+## Demo
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out the project in action <a href="https://docuchatfe.vercel.app/signup/">here</a>. 
+<br><br>
