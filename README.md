@@ -23,3 +23,7 @@ DocuChat is an AI-powered chat assistant that combines Google's Gemini API for a
 
 Check out the project in action <a target="__blank" href="https://docuchatfe.vercel.app/signup/">here</a>. 
 <br><br>
+![Screen Shot 1946-05-18 at 12 32 06 AM](https://github.com/user-attachments/assets/a85966ad-aafb-4f6c-8185-1c0f71787762)
+
+![Screen Shot 1946-05-18 at 12 33 28 AM](https://github.com/user-attachments/assets/7f0d89ed-141f-42d1-bffe-cc2373fa2ed9)
+
