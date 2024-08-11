@@ -29,12 +29,6 @@ export default function Login() {
       const username = process.env.NEXT_PUBLIC_DEMO_USERNAME;
       const password = process.env.NEXT_PUBLIC_DEMO_PASSWORD;
 
-
-
-      console.log(host_name,username,password)
-
-      
-       
       const response = await fetch(`${host_name}/api-auth/login/`, {
         method: 'POST',
         headers: {
